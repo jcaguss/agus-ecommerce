@@ -39,6 +39,17 @@ var getJSONData = function(url){
         return result;
     });
 }
+function start(){
+  if(sessionStorage.getItem('login') == null){
+      location.replace('login.html');
+  }else{
+    document.getElementById('user').innerHTML = sessionStorage.getItem('login')
+  }
+}
+function finalizarSesion(){
+  sessionStorage.removeItem('login')
+}
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
