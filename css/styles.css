@@ -1,9 +1,56 @@
+body{
+  background-color: rgb(248, 249, 250);
+}
 .jumbotron, .card-body, .container, .site-header{
     font-family: 'Raleway', serif !important;
 }
 
 .jumbotron .display-4{
     font-weight: bold;
+}
+.card-custom {
+  overflow: hidden;
+  min-height: 450px;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+  height: 200px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+  position: absolute;
+  content: '';
+  top: 161px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+}
+
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 100px;
+  left: 1.25rem;
+  width: 100px;
+  height: 100px;
 }
 
 .jumbotron {
@@ -17,6 +64,105 @@
   background-repeat: no-repeat;
   color: black;
   font-weight: bold;
+}
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  position: relative;
+  top: -50px;
+}
+.formulario__lable{
+  display: block;
+  font-weight: 700;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 15px;
+}
+.formulario__grupo-input{
+  position: relative;
+}
+.formulario__input{
+  width: 250px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 2px;
+  line-height: 43px;
+  height: 35;
+  border: 3px solid rgba(11, 113, 153, 0.5);
+  border-radius: 6px;
+  
+}
+.formulario__img{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  height: 275px;
+  position: relative;
+  top: -20px;
+}
+.formulario__button{
+  line-height: 43px;
+  border: 2px solid rgba(11, 113, 153, 0.5);
+  border-radius: 6px;
+  background-color: rgb(34, 159, 188);
+  font-family: 'Raleway', serif;
+  font-size: 17px;
+  position: relative;
+  top: 20px;
+  
+}
+.error{
+  border: 3px solid rgba(231, 26, 26, 0.5);
+}
+.col{
+  margin: 10px;
+  height: 178px;
+}
+.containerInputMaxMin{
+  margin: 5px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.rangoDePrecioMin,
+.rangoDePrecioMax{
+  margin-left: 150;
+
+}
+.dgrid{
+  display: block;
+}
+#productCost{
+  position: relative;
+  display: inline-block
+}
+#productCurrency{
+  position: relative;
+  display: inline-block;
+}
+.checked {
+  color: orange;
+}
+.clasificacion input[type='radio'] {
+  opacity: 0;
+}
+.clasificacion label {
+  font-size: 30px;
+  color: rgb(150, 150, 150);
+  cursor: pointer;
+}
+.clasificacion label:hover {
+  color: rgb(217, 162, 11);
+}
+.checkear+label {
+  color: rgb(217, 162, 11) !important;
+}
+.formGroup{
+  padding: 10px;
+  text-align: left;
+  border-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -139,3 +285,61 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+@media (max-width: 426px){
+  .formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    position: relative;
+    top: 50px;
+  }
+  .formulario__lable{
+    display: block;
+    font-weight: 700;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    top: 15px;
+  }
+  .formulario__grupo-input{
+    position: relative;
+  }
+  .formulario__input{
+    width: 250px;
+    margin: 7px;
+    background: #fff;
+    border-radius: 2px;
+    line-height: 30px;
+    height: 35;
+    border: 3px solid rgba(11, 113, 153, 0.5);
+    border-radius: 6px;
+    
+  }
+  .formulario__img{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    height: 120px;
+    position: relative;
+    top: 50px;
+  }
+  .formulario__button{
+    line-height: 43px;
+    border: 2px solid rgba(11, 113, 153, 0.5);
+    border-radius: 6px;
+    background-color: rgb(34, 159, 188);
+    font-family: 'Raleway', serif;
+    font-size: 17px;
+    position: relative;
+    top: 20px;
+    
+  }
+  .error{
+    border: 3px solid rgba(231, 26, 26, 0.5);
+  }
+}
+
+  
+  
+
+  
